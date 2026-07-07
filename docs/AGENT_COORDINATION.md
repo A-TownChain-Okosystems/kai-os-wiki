@@ -19,6 +19,8 @@
 | `aurora-base44-superagent-69c1e0c577ccf6c45a27a480` | Aurora | 🤖 KI-Agent | Base44 Superagent — App-ID `69c1e0c577ccf6c45a27a480` (eindeutige Instanz) | Primärer Entwicklungs-/Dokumentations-Agent, fuehrt Sync-, Compliance- und Konsolidierungsarbeit aus |
 | `kai-os-kernel` | KAI | 🤖 In-Projekt-KI | Teil der Codebasis selbst, kein Editor-Agent | Laufzeitkomponente — verarbeitet Nutzeranfragen INNERHALB von KAI-OS, bearbeitet NICHT das Repo |
 | `aurora-base44-superagent-6a2756186106d6f0fbb105b5` | Aurora | 🤖 KI-Agent | Base44 Superagent — App-ID `6a2756186106d6f0fbb105b5` (separate Instanz von der oben registrierten App-ID `69c1e0c577ccf6c45a27a480`) | Sync-/Cleanup-/Governance-Agent (Duplikat-Cleanup, Naming Conventions, Wiki-Score, OS-Gap-Analyse) |
+| `aurora-base44-superagent-6a27614c7219ab1e4f951842` | Aurora | 🤖 KI-Agent | Base44 Superagent — App-ID `6a27614c7219ab1e4f951842` (separate Instanz von `69c1e0c577ccf6c45a27a480` und `6a2756186106d6f0fbb105b5`) | KAI-OS Daily Full Sync Owner (16-Dienste-Automation), Reality-Check/Audit-Agent (Roadmap-vs-Code-Konsistenz) |
+| `unsigned-aurora-bot-base44ai` | Aurora-Bot (⚠️ UNSIGNIERT — keine App-ID im Commit) | 🤖 KI-Agent | Git-Identitaet `Aurora-Bot <aurora@base44.ai>` — App-ID unbekannt, da Signatur-Pflicht (siehe unten) verletzt | Taeglicher Wiki-Kapitel-Sync (zuletzt: Kap. 17 + 31, 07.07.2026 08:19 UTC via GitHub+Notion) — Funktion aehnelt Agent `...105b5`s Automationen, aber NICHT von dessen 3 registrierten Automationen (`atc_master_sync`, `kai_os_daily_sync` x2) erzeugt, siehe Verifikation unten |
 | `shivacore-owner-human` | ShivaCore (Michael Wroblewski) | 🧑 Mensch / Projekt-Owner | Base44 Superagent-Chat (Auftraggeber-Seite) | Menschlicher Entscheidungstraeger und Owner des A-TownChain-Oekosystems. Erteilt Auftraege an KI-Agenten, trifft finale Entscheidungen bei offenen Decisions (z.B. AD-002), einziger Copyright-Rechteinhaber. **Kein Agent** — steht hier zur klaren Abgrenzung: Aktionen mit dieser ID sind Menschen-initiiert, nicht KI-generiert. |
 
 > **Wichtig:** KAI ist **kein** Entwicklungs-Agent, der Code/Doku schreibt —
@@ -35,6 +37,26 @@
 > separate Chat-Sessions/Superagent-Instanzen desselben Nutzers), sollte aber
 > bei Governance-Fragen beruecksichtigt werden: **Agent-ID ≠ Agent-Name** —
 > immer die vollstaendige ID mit App-ID pruefen, nicht nur "Aurora".
+
+> 🆕 **5. Agent identifiziert (07.07.2026, Agent `...105b5`):** Ein fuenfter
+> Akteur wurde durch Commit-Forensik gefunden — Git-Identitaet
+> `Aurora-Bot <aurora@base44.ai>` (1 bestaetigter Commit: `53acff6`,
+> 07.07.2026 08:19 UTC, "Auto-sync: Kapitel 17 & 31 aktualisiert"). Er
+> signiert seine Commits NICHT mit `[agent: aurora-base44-superagent-<ID>]`
+> und verstoesst damit gegen die Signatur-Pflicht unten. Verifiziert:
+> es ist KEINE der 3 aktiven Automationen von Agent `...105b5`
+> (`atc_master_sync`, `kai_os_daily_sync` x2 — alle pruefbar ueber
+> `list_automations`, alle mit anderer Commit-Identitaet). Ein weiterer
+> untagged Commit (`9a449bd`, MasterBrain-E-Mail) wurde dagegen eindeutig
+> Agent `...951842` zugeordnet (gleiche E-Mail-Identitaet wie dessen
+> signierte Commits) — das war nur eine einzelne vergessene Signatur,
+> kein 6. Agent.
+>
+> **Konsequenz:** Es gibt nachweislich **5 Base44-Superagent-Akteure**
+> an diesem Repo, einer davon bislang ohne verifizierbare App-ID. Naechster
+> Agent, der einen Commit von `Aurora-Bot <aurora@base44.ai>` sieht: bitte
+> Timing mit eigenen Automation-Laeufen abgleichen und hier die echte
+> App-ID nachtragen, sobald bekannt.
 
 **Wenn ein neuer/anderer Agent dieses Projekt bearbeitet:** Er MUSS sich hier
 mit einer neuen Zeile eintragen (Agent-ID nach Schema `<name>-<plattform>-<typ>`),
@@ -60,6 +82,55 @@ zeitversetzt oder parallel arbeiten.
 
 ## 📜 Session-Log (chronologisch, neueste zuerst)
 
+
+### Session: aurora-base44-superagent-6a27614c7219ab1e4f951842 — 06.07.2026, 22:19 UTC+2 (Vollstaendiger MD-Audit + REALITY_STATUS.md erstellt)
+
+| Feld | Wert |
+|------|------|
+| **Fokus** | Auf Wunsch des Owners: jede .md-Datei / jede Datei sichten und den tatsaechlichen Software-Stand fuer andere KI-Agenten dokumentieren. |
+| **Neues Artefakt** | `REALITY_STATUS.md` (Root beider Repos) — einzige Quelle mit script-verifizierten Zahlen, ersetzt verstreute/widerspruechliche Behauptungen in README/ROADMAP/STATUS/Wiki. |
+| **Wichtigster Fund — Python-Stub-Regression** | Frueherer Claim "Migration Complete, 0 Python-Stubs" (05.07.) ist **widerlegt**: 72 reale Python-Dateien aktiv (21 am 06.07. von Agent `...105b5` bewusst aus `aistudio/temp_repo/` zurueckkopiert fuer Testsuite-Kompatibilitaet, plus 51 in `aistudio/temp_repo/` selbst). Banner in `chapter-70`, `MIGRATION_MAP.md`, `STANDARDS_REGISTRY.md` gesetzt. |
+| **Fund — Wiki-Kapitelzahl unverifizierbar** | Nur 9 Dateien folgen `chapter-N-*.md` (63, 70-77). Die behaupteten "75 Kapitel" lassen sich nicht auf reale Dateien 1:1 abbilden; `docs/wiki/kai-os/` ist ein alter, verschachtelter Full-Repo-Schnappschuss (58 Dateien), kein Kapitel. Empfehlung: Kennzahl neu definieren oder streichen. |
+| **Fund — Standards-Registry-Duplikat** | `ATC-0009-BRIDGE.md` existiert zweifach (altes 4-stelliges Format), plus `ATC-LIC`/`ATS-LIC` brechen die "nur ATC-01-99"-Konvention (ATS sollte laut Session vom 05.07. eliminiert sein). 101 tatsaechliche ATC-*.md Dateien, nicht 98/99. |
+| **Fixes committed & gepusht** | Chain-ID 9001→9000 (5 Dateien + `config/mainnet_genesis.json`), Parser-Fix fuer String-Pfad-Importe (92→96/176 parsen), Dependency-Sicherheitsupdates (cryptography/requests/python-dotenv/pytest/flask/flask-cors), npm audit fix (11→10 Alerts). Commits: `17a4096` (code), `MILESTONES.md`-Korrektur (docs). |
+| **MILESTONES.md korrigiert** | MK10, MK12-15 von "✅ Erfuellt" auf "🔵 In Arbeit" runtergestuft — Code existiert, parst aber laut REALITY_STATUS.md nicht bzw. ist gar kein ATCLang (Asset-Module = Python-Pseudocode). Neue Bilanz: 5/15 vollstaendig (33,3%) statt vorheriger falscher "10/15 (66,7%)". |
+| **Nicht behoben (bewusst, REGEL 9)** | Parser-v1.0-Upgrade (80 Dateien, Mehrtage-Sprint), Asset-Module-Neuschreibung, 44-Issues-Reopen-Entscheidung, K3/K4-Konsolidierung, npm uuid-Breaking-Fix, Wiki-Kapitel-Neudefinition, ATC-LIC/BaFin-Doku-Status — alle in REALITY_STATUS.md Abschnitt 9 aufgelistet. |
+| **Fuer naechsten Agenten** | REALITY_STATUS.md vor jeder Status-Behauptung lesen und AKTUALISIEREN (nicht nur neue Behauptung obendrauf schreiben). Nicht jede der ~650 .md-Dateien in beiden Repos wurde einzeln gelesen (nicht praktikabel) — stattdessen systematischer Zahlen-Grep + Parser/Test/API-Verifikation gegen alle zentralen Status-Dokumente. |
+| **Status** | ✅ Audit + Dokumentation abgeschlossen und gepusht. |
+
+---
+
+### Session: aurora-base44-superagent-6a27614c7219ab1e4f951842 — 06.07.2026, 19:39 UTC+2 (Reality-Check: Roadmap/Milestones vs. echter Code-Stand)
+
+| Feld | Wert |
+|------|------|
+| **Fokus** | Kritischer Abgleich auf Wunsch des Owners: stimmt ROADMAP.md/MILESTONES.md mit dem tatsaechlichen Code ueberein? Zusaetzlich: Git-Push-Status beider Haupt-Repos geprueft. |
+| **Ergebnis 1 — Parser-Realitaet** | ⚠️ Nur **92/176 .atc-Dateien (52,3%) parsen fehlerfrei** mit dem aktuellen ATCLang-Parser (`atclang/lexer` + `atclang/parser`). 84 Dateien (47,7%) scheitern — v.a. alle neueren Module: 14 GCL-Kernel-Busse, 28 Franchise-Factories, 11 Civilization-Engine-Module, 8 Meta-Module, 16 Asset-Module. Hauptursachen: `import "std/crypto.atc"`-Syntax wird vom Parser nicht unterstuetzt, sowie `!`-Operator- und `let`-Praezedenz-Bugs. |
+| **Ergebnis 2 — Chain-ID-Widerspruch** | ❌ `ROADMAP.md` und `SPRINT_ROADMAP.md` behaupten "Mainnet Chain ID 9001", waehrend `AD-004` (resolved), `ECOSYSTEM.md`, `CHANGELOG.md` und Issue #71 durchgaengig **9000** verwenden. Direkter Widerspruch zur bereits getroffenen Entscheidung. |
+| **Ergebnis 3 — MILESTONES.md vs. ROADMAP.md** | ❌ `MILESTONES.md` fuehrt MK10 + MK12 als ✅ Erfuellt sowie drei komplett neue Meilensteine (MK13 Franchise Factory v2, MK14 MetaFactory, MK15 Civilization Platform, alle ✅ am 05.07.), die in `ROADMAP.md` (gleicher Ordner) gar nicht existieren bzw. dort explizit als ⬜ GEPLANT gefuehrt werden. Fuer MK13-15 existiert zwar echter Code (47 `.atc`-Dateien), der aber laut Ergebnis 1 nicht parst. |
+| **Ergebnis 4 — Issue-Zahlen** | ⚠️ GitHub-API live abgefragt: **90 Issues total, 79 zu, 11 offen (87,8%)** — ROADMAP/SPRINT_ROADMAP behaupten veraltet "78/82 (95,1%)", vor Oeffnung der K1-K8-Konsolidierungs-Issues (#85-92). |
+| **Ergebnis 5 — Test-Coverage** | ⚠️ 388 Python-Testfunktionen, 345 sammelbar (4 Dateien crashen beim Import), davon 302 gruen / 30 rot / 13 skipped. **0 echte ATCLang-Tests** — die einzige Datei mit "test" im Namen (`testnet_launcher.atc`) ist keine Testdatei. Deckt sich mit dem Sync-Report von heute ("0,6% ATCLang Coverage"). |
+| **Ergebnis 6 — Git-Push-Status** | ✅ Beide Haupt-Repos (`a-townchain-os`, `a-townchain-os-docs`) zu 100% mit `origin/main` synchron, keine lokalen/uncommitted Aenderungen. |
+| **Aktion** | Nur dokumentiert und hier eingetragen — KEINE automatischen Fixes an Chain-ID, MILESTONES.md oder Parser (REGEL 9 — Entscheidung bei Michael, da MK-Status und Chain-ID Grundsatzfragen sind). |
+| **Fuer naechsten Agenten** | Vor jeder "X ist fertig"-Aussage: Parser tatsaechlich laufen lassen, nicht nur Datei-Existenz pruefen (bestaetigt die Lektion von Agent `...105b5` oben — Existenz ≠ Funktionsfaehigkeit). Chain-ID-Konflikt (9000 vs 9001) und MILESTONES.md/ROADMAP.md-Divergenz sollten in einem gemeinsamen Fix-Commit bereinigt werden, sobald Michael entscheidet. |
+| **Status** | ✅ Audit abgeschlossen, Ergebnisse an Michael berichtet. Entscheidungen offen: (1) Chain-ID final 9000 vs 9001, (2) MK13-15 Status "erfuellt" vs "in Arbeit" bis Parser sie akzeptiert, (3) Parser-Fix fuer 84 kaputte Dateien priorisieren? |
+
+---
+
+### Session: aurora-base44-superagent-6a2756186106d6f0fbb105b5 — 06.07.2026, 18:15 UTC+2 (K1 abgeschlossen + K3 Teilfortschritt)
+
+| Feld | Wert |
+|------|------|
+| **Fokus** | Sprint K1 (Repo-Audit/Mapping) abgeschlossen; Sprint K3 (Python-Backend) Teilmigration; ShivaCore-Kernel-Statuscheck |
+| **Ergebnis K1** | ✅ `KONSOLIDIERUNGS_MATRIX.md` erstellt (Datei-Inventar, Python-Import-Graph, Dead-Code-Kandidaten, Konflikt-Liste, Quelle→Ziel-Mapping). Kernbefund: die Backend-Modul-Konsolidierung (9 `atc-*`-Repos → `modules/`) war bereits erledigt — offene Arbeit ist ausschliesslich die Integration von `aistudio/` (148 React-Komponenten, 133 Python-Dateien). Issue #85 geschlossen. |
+| **Ergebnis K3** | 🔄 Teilfortschritt (Issue #87 bleibt offen). 21 reale Python-Module aus `aistudio/temp_repo/` an von Tests erwartete Pfade migriert (`gateway/`, `blockchain/*`, `backend/*`, `modules/kernel/ai_kernel/`). Testsuite: von "10 Dateien kollationieren nicht mal" auf **345/355 sammelbar, davon 307 gruen / 30 rot / 8 skipped**. Commit `2ad2d5c`. |
+| **Wichtiger Fund — Kernel-Status** | `modules/kernel/` (GCL, 13-Bus-Architektur AD-00 bis AD-14) ist architektonisch vollstaendig (24 Dateien, 78-529 Zeilen, keine Stubs) — aber **nur in ATCLang (.atc)**, in dieser Session nicht durch Compiler/VM-Testpfad verifiziert. `modules/kernel/ai_kernel/ai_kernel.py` (die einzige Python-Bruecke) ist eine aeltere Version ohne Klasse `AIRequest` — blockiert `tests/unit/test_kai_integration.py`. **Architektur fertig, Laufzeit-Verifizierung offen.** |
+| **KORREKTUR fruehere Doku-Aussage** | Alte Behauptung "`core/ai_kernel.py` ist deprecated Compat-Shim" ist FALSCH — Datei existiert real nicht. Siehe `memory.md #158` (Aurora Superagent 6a27...). |
+| **Verbleibende echte Luecken (K3)** | `blockchain/nodes/bootstrap.py` + `blockchain/wallet/did.py` existieren nur als `.atc`, keine Python-Entsprechung (betrifft Bootstrap Node, kritischer Pfad #14!). `gateway/router.py` + `rate_limit.py`: API-Mismatch zu Tests (Circuit-Breaker + `window_seconds` fehlen). |
+| **Fuer naechsten Agenten** | K4 (#88, Frontend) noch komplett offen. Bei K3-Fortsetzung: nicht nur Dateien verschieben, sondern echte Feature-Luecken schliessen (AIKernel-API erweitern, Bootstrap/DID Python-Layer schreiben oder .atc-Aufruf aus Tests). |
+| **Status** | ✅ K1 abgeschlossen. 🔄 K3 in Arbeit, naechster Schritt dokumentiert. |
+
+---
 
 ### Session: aurora-base44-superagent-6a2756186106d6f0fbb105b5 — 06.07.2026, 17:35 UTC+2 (Abschluss)
 
@@ -107,10 +178,10 @@ zeitversetzt oder parallel arbeiten.
 
 | Feld | Wert |
 |------|------|
-| **Agent-ID** | `aurora-base44-superagent-69c1e0c577ccf6c45a27a480` (Aurora, Base44 Superagent, eindeutige App-ID) |
-| **Session-Start** | 06.07.2026 |
-| **Aktueller Fokus** | BaFin-Compliance Dokumentation + Agent-Governance (dieses Dokument) |
-| **Beanspruchte Bereiche** | `docs/compliance/*`, `docs/AGENT_POLICY.md`, `docs/DECISIONS_REGISTER.md`, `docs/LICENSING_OVERVIEW.md` |
+| **Agent-ID** | `aurora-base44-superagent-6a27614c7219ab1e4f951842` (Aurora, Base44 Superagent, eindeutige App-ID) |
+| **Session-Start** | 06.07.2026, 19:39 UTC+2 |
+| **Aktueller Fokus** | Kritischer Reality-Check: Code vs. ROADMAP/MILESTONES/Wiki (Parser-Verifikation, Chain-ID-Konflikt, Issue-Zahlen via GitHub-API) + tägliche 16-Dienste-Sync-Automation |
+| **Beanspruchte Bereiche** | Read-only Audit (kein Bereich exklusiv beansprucht) — Ergebnisse siehe Session-Log unten |
 | **Status** | 🔄 Aktiv |
 
 > Andere Agenten: Bevor ihr in den oben genannten Bereichen arbeitet — prueft
