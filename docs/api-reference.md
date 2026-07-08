@@ -13,8 +13,8 @@ Vollständige, modul-spezifische Endpunkt-Dokumentation findet sich in den jewei
 | Modul | API-Dokumentation |
 |-------|--------------------|
 | Franchise Factory | [docs/wiki/franchise/docs/API.md](./wiki/franchise/docs/API.md) |
-| Overview / Core | [docs/wiki/overview/docs/API.md](./wiki/overview/docs/API.md) |
-| ShivaOS UI | [docs/wiki/ui/docs/API.md](./wiki/ui/docs/API.md) |
+| Overview / Core | [docs/wiki/overview/docs/API.md](./wiki/franchise/docs/API.md) |
+| ShivaOS UI | [docs/wiki/ui/docs/API.md](./wiki/franchise/docs/API.md) |
 | Gateway-Architektur | [docs/architecture/GATEWAY.md](./architecture/GATEWAY.md) |
 
 ## Gateway-Grundlagen
