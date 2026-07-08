@@ -26,7 +26,7 @@ Vollständige, modul-spezifische Endpunkt-Dokumentation findet sich in den jewei
 ## Verwandte Dokumente
 
 - [ATCLang Guide](./atclang-guide.md) — Sprachreferenz für Smart Contracts
-- [ATCLang Spezifikation](./atclang/ATCLANG_SPEC_FULL.md) — vollständige Sprach-Spec
+- [ATCLang Spezifikation](../atclang/ATCLANG_SPEC.md) — vollständige Sprach-Spec
 - [Architektur-Übersicht](./architecture/) — alle System-Komponenten
 
 ---

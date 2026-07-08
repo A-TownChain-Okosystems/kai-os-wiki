@@ -9,7 +9,7 @@
 ATCLang ist die proprietäre Programmiersprache von A-TownChain OS für Smart Contracts, Konsens-Module
 und Kernkomponenten ("ATCLang First Policy", siehe ATC-99 Standard und Decision AD-006). Alle
 Systemkomponenten werden schrittweise nach ATCLang migriert — vollständige Sprachreferenz siehe
-[ATCLANG_SPEC_FULL.md](./atclang/ATCLANG_SPEC_FULL.md).
+[ATCLANG_SPEC_FULL.md](../atclang/ATCLANG_SPEC.md).
 
 ## Minimalbeispiel — Smart Contract
 
@@ -40,7 +40,7 @@ contract SimpleToken {
 
 ## Weiterführend
 
-- [Vollständige Sprach-Spezifikation](./atclang/ATCLANG_SPEC_FULL.md)
+- [Vollständige Sprach-Spezifikation](../atclang/ATCLANG_SPEC.md)
 - [API Reference](./api-reference.md)
 - [Smart Contract Standard (ATC-14)](./standards/ATC-14-DETERMINISTIC_EXECUTION.md)
 
