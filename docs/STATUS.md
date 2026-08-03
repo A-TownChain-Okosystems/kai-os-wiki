@@ -48,3 +48,13 @@
 
 ---
 *Aurora · 03.08.2026 16:19 (Europe/Berlin)*
+
+## ATCLang Archive (03.08.2026)
+- **15 files archived** → `archive/atclang-v01/` + `archive/duplicates/`
+- **14 redirect stubs** at original locations
+- **6 consensus v0.1** → v0.3 (_atc8X) migration complete
+- **4 contracts v0.1** → modules/contracts/ migration complete
+- **4 src/ duplicates** cleaned up (K3/K4)
+- **New:** Kernel Runtime (`atclang/runtime/kernel_runtime.py`, 625 lines)
+- **Compiler fixes:** MapLiteral, ListLiteral, StructLiteral, TernaryExpr, EnumDef, extended operators
+- **Siehe:** `archive/ATCLANG_ARCHIVE.md`
