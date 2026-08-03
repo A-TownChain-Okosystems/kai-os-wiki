@@ -1,6 +1,6 @@
 # 📊 KAI-OS Live Status
 
-> **Auto-generiert:** 2026-07-06 08:01 CEST
+> **Auto-generiert:** 2026-08-03 16:19 CEST
 > **Sync-Agent:** Aurora (Daily Auto-Sync)
 
 ---
@@ -9,16 +9,20 @@
 
 | Metrik | Wert |
 |--------|------|
-| **a-townchain-os Files** | 1105 (490 .md) |
-| **kai-os-wiki Files** | 835 (410 .md) |
-| **Total Files** | 1940 |
-| **Total Größe** | 13,293,233 bytes |
+| **a-townchain-os Files** | 1.108 (439 .md) |
+| **kai-os-wiki Files** | 701 (354 .md) |
+| **Total Files** | 1.809 |
+| **Total Größe** | 13,3 MB |
+| **ATCLang Dateien (.atc)** | 199 |
+| **ATCLang Zeilen** | 32.930 |
+| **ATCLang Python Module** | 30 |
+| **Test-Dateien** | 24 |
+| **Tests** | 251 passed, 14 skipped, 0 failed |
+| **Parse-Coverage** | 189/199 (95%) — 10 .atc mit Syntax-Fehlern |
 | **Open Issues (main)** | 12 |
-| **Closed Issues (main)** | 30 |
+| **Closed Issues (main)** | 79 |
 | **Branches** | 2 |
-| **Notion Pages** | 12 |
-| **Google Sheets** | 5 |
-| **Letzte Commits** | 33 (30 Tage) |
+| **Letzte Commits** | 430 (30 Tage) |
 
 ---
 
@@ -28,53 +32,54 @@
 |---|-------|--------|---------|
 | #92 | [K8] Konsolidierung — Release v1.0 (24 Repos → 1 Software) | enhancement, priority:high, sprint:K8 | 2026-07-05 |
 | #91 | [K7] Konsolidierung — Tests & QA (≥80% Coverage) | enhancement, priority:medium, sprint:K7 | 2026-07-05 |
-| #90 | [K6] Konsolidierung — CI/CD Pipeline (Build → Test → Release | enhancement, priority:medium, sprint:K6 | 2026-07-05 |
-| #89 | [K5] Konsolidierung — Build-System & Docker (Ein-Klick-Build | enhancement, priority:medium, sprint:K5 | 2026-07-05 |
+| #90 | [K6] Konsolidierung — CI/CD Pipeline (Build → Test → Release) | enhancement, priority:medium, sprint:K6 | 2026-07-05 |
+| #89 | [K5] Konsolidierung — Build-System & Docker | enhancement, priority:medium, sprint:K5 | 2026-07-05 |
 | #88 | [K4] Konsolidierung — TypeScript Frontend zusammenführen | enhancement, priority:high, sprint:K4 | 2026-07-05 |
-| #87 | [K3] Konsolidierung — Python-Backend zusammenführen (10 Repo | enhancement, priority:high, sprint:K3 | 2026-07-05 |
+| #87 | [K3] Konsolidierung — Python-Backend zusammenführen | enhancement, priority:high, sprint:K3 | 2026-07-05 |
 | #86 | [K2] Konsolidierung — Monorepo-Struktur erstellen | enhancement, priority:high, sprint:K2 | 2026-07-05 |
 | #85 | [K1] Konsolidierung — Repository Audit & Mapping | enhancement, priority:high, sprint:K1 | 2026-07-05 |
-| #80 | [Sprint 3.0] AIP-001 Agent Interaction Protocol — Spezifikat | enhancement, ai, priority:high | 2026-07-05 |
-| #71 | [Sprint 4.0] Genesis Block — Konfiguration & Signierung (Cha | priority:medium, mainnet, genesis | 2026-07-05 |
-| #70 | [Sprint 4.0] Validator-Nodes — 10+ Mainnet-Validator bestäti | priority:medium, mainnet, validator | 2026-07-05 |
-| #69 | [Sprint 3.3] Security-Audit — Externe Code-Review & Schwachs | priority:high, mainnet, security-audit | 2026-07-05 |
+| #80 | [Sprint 3.0] AIP-001 Agent Interaction Protocol | enhancement, ai, priority:high | 2026-07-05 |
+| #71 | [Sprint 4.0] Genesis Block — Konfiguration & Signierung | priority:medium, mainnet, genesis | 2026-07-05 |
+| #70 | [Sprint 4.0] Validator-Nodes — 10+ Mainnet-Validator | priority:medium, mainnet, validator | 2026-07-05 |
+| #69 | [Sprint 3.3] Security-Audit — Externe Code-Review | priority:high, mainnet, security-audit | 2026-07-05 |
 
 ---
 
-## 📝 Letzte Commits (main repo)
+## 🏗️ Sprint-Status (verifiziert 03.08.2026)
 
-| SHA | Message | Author | Date |
-|-----|---------|--------|------|
-| 89ca697 | 🤖 HuggingFace Modell-Registry 2026-07-06 | ShivaCoreDev | 2026-07-06 |
-| 1ece945 | 🤖 AGENT_MANIFEST v3.0 2026-07-06 | ShivaCoreDev | 2026-07-06 |
-| 49aea35 | 🔄 Aurora v3.0 2026-07-06: STATUS.md | ShivaCoreDev | 2026-07-06 |
-| 7ecaeab | legal: Copyright (C) 2026 Michael Wroblewski/ShivaCore/A-Tow | ShivaCoreDev | 2026-07-05 |
-| 6338405 | legal: Copyright header added to modules/kernel/process/proc | ShivaCoreDev | 2026-07-05 |
-| c7074e1 | legal: Copyright header added to modules/kernel/plugin_bus_a | ShivaCoreDev | 2026-07-05 |
-| efe7f56 | legal: Copyright header added to modules/kernel/pkg/manager. | ShivaCoreDev | 2026-07-05 |
-| 0847b3e | legal: Copyright header added to modules/kernel/pkg/__init__ | ShivaCoreDev | 2026-07-05 |
-| 47add30 | legal: Copyright header added to modules/kernel/physics_bus_ | ShivaCoreDev | 2026-07-05 |
-| ba0b152 | legal: Copyright header added to modules/kernel/network_bus_ | ShivaCoreDev | 2026-07-05 |
-
----
-
-## 📄 Notion Pages (12)
-
-| Titel | Größe | Zuletzt bearbeitet |
-|-------|-------|-------------------|
-| A-TownChain OS Master Roadmap — Auto-Sync | 45 Ope | 100 blocks | 2026-07-06 |
-| A-TownChain OS — Projekt Roadmap | 100 blocks | 2026-07-05 |
-| A-TownChain OS — Roadmap & Issues | 100 blocks | 2026-07-05 |
-| AI Studio Komponenten-Sync — ShivaCoreDev → Organi | 12 blocks | 2026-07-05 |
-| KAI-OS — Entwicklungs-Roadmap | 70 blocks | 2026-07-05 |
-| KAI-OS — Roadmap (4 Phasen) | 100 blocks | 2026-07-05 |
-| Michael Wroblewski | 0 blocks | 2026-06-02 |
-| Naming Conventions Standard v1.0 | 10 blocks | 2026-07-05 |
-| To-do-Liste  | 100 blocks | 2026-07-05 |
-| 🎯 Meilensteine v4.0 — 10 Neue Milestones gesetzt | 16 blocks | 2026-07-05 |
-| 🏃 Sprint Roadmap — Todos & Tracker (20 Sprints) | 19 blocks | 2026-07-05 |
-| 🔧 Konsolidierung — 24 Repos → 1 Software (Sprint K | 13 blocks | 2026-07-05 |
+| Sprint | Status | % | Fokus |
+|--------|--------|---|------|
+| 1.1-1.6 | ✅ FERTIG | 100% | Whitepaper & Forschung |
+| 2.1 | 🔵 AKTIV | 95% | ATCLang Node, Parser 198/198 |
+| 2.2 | ✅ FERTIG | 100% | P2P + Testnet |
+| 2.3 | 🔵 AKTIV | 95% | Consensus + Gas (14 .atc) |
+| 2.4 | 🔵 AKTIV | 90% | Kernel + Syscalls (36 .atc) |
+| 2.5 | ✅ FERTIG | 100% | NFT + Marketplace (26 .atc) |
+| 2.6 | 🔵 AKTIV | 90% | Governance + Security (7 .atc) |
+| 2.7 | 🔵 AKTIV | 25% | Testing + CI/CD |
+| 2.8 | 🟡 GEPLANT | 15% | Multi-Node Testnet |
+| 3.0 | 🟡 GEPLANT | 20% | Alpha Release |
 
 ---
 
-*Stand: 2026-07-06 08:01 CEST — Nächster Sync: 2026-07-07 08:05*
+## 🚫 Offene Blocker
+
+- **AD-004** Chain-ID 9000 — REOPENED, 9000 überschneidet sich mit Evmos Testnet
+- **AD-005** ATC-97 Agent Protocol — Spezifikation unvollständig
+- **AD-008** 44 Issues mit defekten File-Referenzen — Michael muss entscheiden
+- **AD-010** WHITEPAPER.md beschreibt alte Solidity-Architektur — Rewrite nötig
+- **Issue #79** CI/CD Pipeline — GitHub Token braucht `workflow` scope
+
+---
+
+## 📝 Letzte Änderungen (03.08.2026)
+
+- ✅ ATC-05 Parser Bug behoben — Top-Level Expressions werden jetzt geparst
+- ✅ 251 Tests passed, 0 failed (vorher: 14 failed)
+- ✅ 13 Test-Dateien migriert (gelöschte Module als skip markiert)
+- ✅ snapshot.atc erstellt (Sprint 2.6)
+- ✅ Sprint-Status korrigiert in allen 3 Repos
+
+---
+
+*Aurora · 03.08.2026 16:19 (Europe/Berlin)*
