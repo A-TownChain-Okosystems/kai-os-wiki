@@ -58,3 +58,15 @@
 - **New:** Kernel Runtime (`atclang/runtime/kernel_runtime.py`, 625 lines)
 - **Compiler fixes:** MapLiteral, ListLiteral, StructLiteral, TernaryExpr, EnumDef, extended operators
 - **Siehe:** `archive/ATCLANG_ARCHIVE.md`
+
+## Treiber Layer (03.08.2026)
+- **5 ATCLang Module** (2.420 Zeilen):
+  - `modules/kernel/drivers/driver_framework.atc` — Driver Registry, IRQ, DMA, I/O, Power
+  - `modules/kernel/drivers/display_driver.atc` — Framebuffer/GPU, Double-Buffering
+  - `modules/kernel/drivers/input_driver.atc` — Keyboard/Mouse/Touch, Event Queue
+  - `modules/kernel/drivers/storage_driver.atc` — Disk/SSD/NVMe, Partitions, TRIM
+  - `modules/kernel/drivers/network_driver.atc` — NIC/WiFi, Ring-Buffer, Jumbo-Frames
+- **Python Runtime**: `atclang/runtime/driver_framework.py` (506 Zeilen)
+- **Kernel API**: 19 neue Treiber-Syscalls
+- **Tests**: 38/38 grün (Driver Lifecycle, I/O, IRQ, Power, DMA, Full Integration)
+- **Standard**: ATC-22+ (HAL Driver Sandbox erweitert)
