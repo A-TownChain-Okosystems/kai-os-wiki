@@ -1,4 +1,3 @@
-# ⚠️ ARCHIVIERT — Inhalte migriert
 
 > ## 🤖 Fuer KI-Agenten — Pflichtlektuere vor jeder Aenderung
 > 1. [`docs/AGENT_POLICY.md`](docs/AGENT_POLICY.md) — verbindliche Regeln, Reality-Check, Konsolidierungsziel
@@ -21,7 +20,6 @@
 
 ---
 
-*Archiviert 2026-06-09 · A-TownChain Ökosystem v1.0.0*
 
 ---
 
